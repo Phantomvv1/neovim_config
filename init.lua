@@ -783,17 +783,31 @@ require("lazy").setup({
 			cmdline = {
 				keymap = {
 					preset = "inherit",
+					["<Tab>"] = { "show_and_insert", "select_next" },
+					["<S-Tab>"] = { "show_and_insert", "select_prev" },
+
+					["<C-space>"] = { "show", "fallback" },
+
+					["<C-n>"] = { "select_next", "fallback" },
+					["<Down>"] = { "select_next", "fallback" },
+					["<C-p>"] = { "select_prev", "fallback" },
+					["<Up>"] = { "select_prev", "fallback" },
+
+					["<C-e>"] = { "cancel" },
 				},
 				completion = {
 					menu = {
 						auto_show = function(ctx)
-							return vim.fn.getcmdtype() == ":"
+							-- return vim.fn.getcmdtype() == ":"
 							-- enable for inputs as well, with:
 							-- or vim.fn.getcmdtype() == '@'
+							return false
 						end,
 					},
 
-					selection = { preselect = true, auto_insert = false },
+					list = {
+						selection = { preselect = true, auto_insert = false },
+					},
 				},
 			},
 
