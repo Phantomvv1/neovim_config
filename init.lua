@@ -170,13 +170,8 @@ vim.keymap.set("n", "<leader>s", ":w<CR>", { silent = true, noremap = true })
 
 vim.keymap.set("n", "<leader>er", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>", { silent = true, noremap = true })
 
-vim.keymap.set("c", "<Down>", function()
-	return vim.fn.pumvisible() == 1 and "<C-n>" or "<Down>"
-end, { expr = true })
-
-vim.keymap.set("c", "<Up>", function()
-	return vim.fn.pumvisible() == 1 and "<C-p>" or "<Up>"
-end, { expr = true })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Open explorer with :E instead of with :Explore
 vim.api.nvim_create_user_command("E", ":Explore", {})
