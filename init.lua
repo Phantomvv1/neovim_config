@@ -786,14 +786,14 @@ require("lazy").setup({
 					["<Tab>"] = { "show_and_insert", "select_next" },
 					["<S-Tab>"] = { "show_and_insert", "select_prev" },
 
-					["<C-space>"] = { "show", "fallback" },
-
-					["<C-n>"] = { "select_next", "fallback" },
-					["<Down>"] = { "select_next", "fallback" },
-					["<C-p>"] = { "select_prev", "fallback" },
-					["<Up>"] = { "select_prev", "fallback" },
-
-					["<C-e>"] = { "cancel" },
+					-- ["<C-space>"] = { "show", "fallback" },
+					--
+					-- ["<C-n>"] = { "select_next", "fallback" },
+					-- ["<Down>"] = { "select_next", "fallback" },
+					-- ["<C-p>"] = { "select_prev", "fallback" },
+					-- ["<Up>"] = { "select_prev", "fallback" },
+					--
+					-- ["<C-e>"] = { "cancel" },
 				},
 				completion = {
 					menu = {
