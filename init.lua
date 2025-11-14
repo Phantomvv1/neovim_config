@@ -184,6 +184,8 @@ vim.keymap.set("n", "<leader>dd", '"_dd', { silent = true, noremap = true })
 -- Delete the lines and place them in the shadow register while in visual mode
 vim.keymap.set("x", "<leader>d", '"_d', { silent = true, noremap = true })
 
+vim.keymap.set("n", "<leader>c", ":copen<CR>", { silent = true, noremap = true })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -419,7 +421,7 @@ require("lazy").setup({
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
-			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
+			vim.keymap.set("n", "<leader>SK", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 			vim.keymap.set("n", "<leader>p", builtin.find_files, { desc = "[S]earch [F]iles" })
 			vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
