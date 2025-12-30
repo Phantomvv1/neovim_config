@@ -185,6 +185,7 @@ vim.keymap.set("n", "<leader>dd", '"_dd', { silent = true, noremap = true })
 vim.keymap.set("x", "<leader>d", '"_d', { silent = true, noremap = true })
 
 vim.keymap.set("n", "<leader>c", ":copen<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>cn", ":cnext<CR>", { silent = true, noremap = true })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
