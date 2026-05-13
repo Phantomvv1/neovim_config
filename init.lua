@@ -745,6 +745,7 @@ require("lazy").setup({
 	{
 		"L3MON4D3/LuaSnip",
 		lazy = false,
+		dependencies = { "rafamadriz/friendly-snippets" },
 		config = function()
 			require("luasnip.loaders.from_vscode").load()
 		end,
